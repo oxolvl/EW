@@ -1,0 +1,48 @@
+.spain-desert {
+  padding: 100px 0 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include media(">=1351px") {
+    padding: 220px 0 120px;
+  }
+  .container {
+    @include media(">=1351px") {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .col {
+      padding: 25px 22px;
+      text-align: left;
+      width: 100%;
+      display: block;
+      background-color: rgba(35, 35, 35, 0.9);
+      @include media(">=1351px") {
+        padding: 44px 32px;
+        max-width: 648px;
+      }
+    }
+    h2 {
+      font-family: "josefin sans";
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-size: 16px;
+      @include media(">=1351px") {
+        font-size: 20px;
+      }
+    }
+    .pseudo-title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.1em;
+      margin-bottom: 5px;
+      @include media(">=1351px") {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.header-menu {
+  background-color: $blue;
+  padding: 23px 0 16px;
+  @include media(">=1351px") {
+    padding: 32px 0 25px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-opener {
+      width: 35px;
+      height: 28px;
+      @include media(">=1351px") {
+        display: none;
+      }
+      .opener {
+        background-color: #fff;
+        height: 2px;
+        width: 35px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        display: block;
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: #fff;
+          height: 2px;
+          width: 35px;
+        }
+        &::before {
+          top: -13px;
+          left: 0;
+        }
+        &::after {
+          right: 0;
+          bottom: -13px;
+        }
+      }
+    }
+  }
+
+  .nav-holder {
+    display: none;
+    @include media(">=1351px") {
+      display: contents;
+    }
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .nav-link {
+      text-decoration: none;
+      font-family: "aleo";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      transition: opacity ease-in-out 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

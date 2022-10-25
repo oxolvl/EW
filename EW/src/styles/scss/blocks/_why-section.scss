@@ -1,0 +1,39 @@
+.why-section {
+  padding: 50px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include media(">=1351px") {
+    padding: 124px 0;
+  }
+  .container {
+    @include media(">=1351px") {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .col {
+      text-align: left;
+      width: 100%;
+      margin-bottom: 50px;
+      @include media(">=1351px") {
+        width: 50%;
+        margin-bottom: 0;
+      }
+      &:last-child {
+        .image-holder {
+          padding-left: 0px;
+          @include media(">=1351px") {
+            padding-left: 136px;
+          }
+          &:last-child {
+            text-align: right;
+            padding: 16px 97px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

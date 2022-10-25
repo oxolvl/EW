@@ -1,0 +1,75 @@
+.search-and-book {
+  background-color: $deep-gray;
+  padding: 60px 0 30px;
+  @include media(">=1351px") {
+    padding: 120px 0 60px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .icon-col {
+      width: 424px;
+      margin-bottom: 50px;
+      @include media(">=1351px") {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-of-type(2) {
+        position: relative;
+      }
+      &:nth-of-type(2)::before,
+      &:nth-of-type(2)::after {
+        position: absolute;
+        content: "";
+        opacity: 0.5;
+        border-top: 1px dashed #ffffff;
+        border-top-left-radius: 200%;
+        border-top-right-radius: 250%;
+        height: 175px;
+        width: 250px;
+        display: inline-block;
+        transform: rotate(-90deg);
+        @include media(">=1351px") {
+          width: 360px;
+          top: -60px;
+        }
+      }
+      &:nth-of-type(2)::before {
+        left: -45px;
+        top: -150px;
+        transform: rotate(-90deg);
+        @include media(">=1351px") {
+          left: -190px;
+        }
+      }
+      &:nth-of-type(2)::after {
+        transform: rotate(90deg);
+        right: -45px;
+        bottom: -75px;
+        @include media(">=1351px") {
+          right: -190px;
+        }
+      }
+      h2 {
+        margin-bottom: 0;
+      }
+      .icon {
+        font-size: 64px;
+        color: $blue;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .icon-checked {
+        color: $red;
+      }
+      .icon-like {
+        color: $light-blue;
+      }
+    }
+  }
+}

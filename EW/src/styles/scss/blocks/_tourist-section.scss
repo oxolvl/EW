@@ -1,0 +1,59 @@
+.tourist-section {
+  padding: 50px 0 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include media(">=1351px") {
+    padding: 120px 0 180px;
+  }
+  .container {
+    h2 {
+      margin-bottom: 24px;
+
+      @include media(">=1351px") {
+        margin-bottom: 60px;
+      }
+    }
+    .row {
+      @include media(">=1351px") {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .col {
+        .image-holder {
+          width: 335px;
+          @include media(">=1351px") {
+            width: 440px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        &:first-child {
+          margin-bottom: 16px;
+        }
+        &:last-child {
+          max-width: 880px;
+          padding: 25px 22px;
+          background-color: $deep-gray;
+          text-align: left;
+          @include media(">=1351px") {
+            padding: 48px 65px 53px;
+          }
+          h3 {
+            margin: 0 0 11px;
+          }
+          p {
+            margin-bottom: 0;
+            .icon-quote-left {
+              font-size: 20px;
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
